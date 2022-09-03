@@ -40,23 +40,7 @@ class _MyHomePageState extends State<MyHomePage> {
           print(width);
 
           return width < 500
-              ? /*Padding(
-                  padding: EdgeInsets.only(top: 100),
-                  child: SingleChildScrollView(
-                      scrollDirection: Axis.horizontal,
-                      child: Row(
-                        children: List.generate(
-                            list.length,
-                            (index) => Padding(
-                                  padding: EdgeInsets.only(right: 10),
-                                  child: Container(
-                                      height: 100,
-                                      width: 100,
-                                      color: Colors.green[index * 100]),
-                                )),
-                      )),
-                )*/
-              GridView.builder(
+              ? GridView.builder(
                   scrollDirection: Axis.horizontal,
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: width < 500 ? 1 : 3,
