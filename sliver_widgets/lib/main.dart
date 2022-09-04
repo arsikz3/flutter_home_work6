@@ -34,7 +34,6 @@ class _MyHomePageState extends State<MyHomePage> {
         drawer: const Drawer(),
         body: SafeArea(
           child: CustomScrollView(slivers: <Widget>[
-            //2
             SliverAppBar(
               pinned: true,
               expandedHeight: 250.0,
@@ -55,7 +54,6 @@ class _MyHomePageState extends State<MyHomePage> {
                     ],
                   )),
             ),
-
             SliverList(
                 delegate: SliverChildListDelegate([
               const Text(
