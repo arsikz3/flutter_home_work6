@@ -44,20 +44,21 @@ class _MyHomePageState extends State<MyHomePage> {
               expandedHeight: 250.0,
               forceElevated: true, //for shadow
               elevation: 20, //for shadow
-              actions: [
-                IconButton(
-                    icon: Icon(Icons.filter_1),
-                    onPressed: () {
-                      // Do something
-                    })
-              ],
+
               flexibleSpace: FlexibleSpaceBar(
-                title: Text('Simple text', textScaleFactor: 1),
-                background: Image.asset(
-                  'assets/images/istockphoto.jpg',
-                  fit: BoxFit.fill,
-                ),
-              ),
+                  title: Text('Simple text', textScaleFactor: 1),
+                  background: Stack(
+                    fit: StackFit.expand,
+                    children: [
+                      Image.asset(
+                        'assets/images/istockphoto.jpg',
+                        fit: BoxFit.fitWidth,
+                      ),
+                      Container(
+                        color: Colors.black.withOpacity(0.5),
+                      )
+                    ],
+                  )),
             ),
 
             SliverList(
